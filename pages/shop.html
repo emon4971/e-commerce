@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - ShopHub</title>
+    
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container-fluid">
+            <div class="top-bar-content">
+                <div class="top-left">
+                    <i class="fas fa-phone-alt"></i> +880 1750653554
+                    <i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5b282e2b2b34292f1b2833342b332e3975383436">ahammadarefeen@gmail.com</a>
+                </div>
+                <div class="top-right">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <span class="divider">|</span>
+                    <a href="#" class="track-order">Track Order</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="container-fluid">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Shop<strong>Hub</strong></span>
+                </div>
+
+                <div class="nav-center">
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="shop.html" class="active">Shop</a></li>
+                        <li><a href="deals.html">Deals</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-right">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search products...">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <button class="icon-btn" onclick="toggleWishlist()">
+                        <i class="far fa-heart"></i>
+                        <span class="badge" id="wishlistBadge">0</span>
+                    </button>
+                    
+                    <button class="icon-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge" id="cartBadge">0</span>
+                    </button>
+                    
+                    <button class="icon-btn" onclick="toggleUserMenu()">
+                        <i class="far fa-user"></i>
+                    </button>
+                    
+                    <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); padding: 60px 0; text-align: center; color: white;">
+        <div class="container-fluid">
+            <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 10px;">Shop All Products</h1>
+            <p style="font-size: 18px; opacity: 0.9;">Discover amazing products at great prices</p>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0; background: var(--bg-light);">
+        <div class="container-fluid">
+            <div style="display: grid; grid-template-columns: 280px 1fr; gap: 40px;">
+                
+                <aside class="shop-sidebar" style="background: var(--bg-white); padding: 30px; border-radius: 15px; height: fit-content; box-shadow: var(--shadow-sm);">
+                    <h3 style="margin-bottom: 25px; font-size: 20px; font-weight: 600;">Filters</h3>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="margin-bottom: 15px; font-size: 16px; font-weight: 600;">Categories</h4>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                <input type="radio" name="category" value="all" checked onchange="filterProducts()">
+                                <span>All Products</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                <input type="radio" name="category" value="electronics" onchange="filterProducts()">
+                                <span>Electronics</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                <input type="radio" name="category" value="fashion" onchange="filterProducts()">
+                                <span>Fashion</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                <input type="radio" name="category" value="home" onchange="filterProducts()">
+                                <span>Home & Garden</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                <input type="radio" name="category" value="sports" onchange="filterProducts()">
+                                <span>Sports</span>
+                            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                <input type="radio" name="category" value="books" onchange="filterProducts()">
+                                <span>Books</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                <input type="radio" name="category" value="gaming" onchange="filterProducts()">
+                                <span>Gaming</span>
+                            </label>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="margin-bottom: 15px; font-size: 16px; font-weight: 600;">Price Range</h4>
+                        <input type="range" id="priceRange" min="0" max="300" value="300" style="width: 100%; margin-bottom: 10px;" oninput="updatePriceLabel(); filterProducts();">
+                        <div style="display: flex; justify-content: space-between; font-size: 14px; color: var(--text-light);">
+                            <span>$0</span>
+                            <span id="priceLabel">$300</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="margin-bottom: 15px; font-size: 16px; font-weight: 600;">Sort By</h4>
+                        <select id="sortBy" onchange="sortProducts()" style="width: 100%; padding: 10px; border: 2px solid var(--border-color); border-radius: 8px;">
+                            <option value="default">Default</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A to Z</option>
+                        </select>
+                    </div>
+
+                    <button onclick="resetFilters()" style="width: 100%; padding: 12px; background: var(--bg-light); border: 2px solid var(--border-color); border-radius: 8px; font-weight: 600; cursor: pointer;">
+                        <i class="fas fa-redo"></i> Reset Filters
+                    </button>
+                </aside>
+
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                        <p style="color: var(--text-light);">Showing <span id="productCount">0</span> products</p>
+                    </div>
+
+                    <div id="productsContainer" class="products-grid"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Shop<strong>Hub</strong></span>
+                    </div>
+                    <p>Your trusted online shopping destination.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +880 1750653554</li>
+                        <li><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="92e1e7e2e2fde0e6d2e1fafde2fae7f0bcf1fdff">ahammadarefeen@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ShopHub. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Cart</h3>
+            <button class="close-cart" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <a href="cart.html" class="btn btn-primary btn-block">View Cart</a>
+        </div>
+    </div>
+
+    <div class="wishlist-sidebar" id="wishlistSidebar">
+        <div class="wishlist-header">
+            <h3><i class="far fa-heart"></i> Wishlist</h3>
+            <button class="close-wishlist" onclick="toggleWishlist()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="wishlist-items" id="wishlistItems"></div>
+    </div>
+
+    <!-- User Menu Dropdown -->
+    <div class="user-menu" id="userMenu">
+        <div class="user-info">
+            <div class="user-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="user-details">
+                <h4>Welcome!</h4>
+                <p>Sign in to your account</p>
+            </div>
+        </div>
+        <ul class="user-menu-list">
+            <li><a href="#" onclick="event.preventDefault(); showMyProfile(); toggleUserMenu();"><i class="fas fa-user"></i> My Profile</a></li>
+            <li><a href="#" onclick="event.preventDefault(); showMyOrders(); toggleUserMenu();"><i class="fas fa-shopping-bag"></i> My Orders</a></li>
+            <li><a href="#" onclick="toggleWishlist(); toggleUserMenu();"><i class="fas fa-heart"></i> Wishlist</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="#" onclick="openAuthModal(); toggleUserMenu(); return false;" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login / Sign Up</a></li>
+        </ul>
+    </div>
+
+        <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../script.js"></script>
+    <script>
+
+        // Read URL parameters and auto-filter
+        function applyURLFilters() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+            
+            if (category) {
+                const categoryRadio = document.querySelector(`input[name="category"][value="${category}"]`);
+                if (categoryRadio) {
+                    categoryRadio.checked = true;
+                    filterProducts();
+                    
+                    // Scroll to products section smoothly
+                    setTimeout(() => {
+                        const productsGrid = document.querySelector('.products-grid');
+                        if (productsGrid) {
+                            productsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 300);
+                }
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderShopProducts();
+            applyURLFilters(); // Apply URL filters after products load
+            updateProductCount();
+        });
+
+        function renderShopProducts() {
+            const container = document.getElementById('productsContainer');
+            container.innerHTML = products.map(product => `
+                <div class="product-card" data-category="${product.category}" data-price="${product.price}">
+                    ${product.badge ? `<span class="product-badge ${product.badge}">${product.badge}</span>` : ''}
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}">
+                        <div class="product-overlay">
+                            <button onclick="addToWishlist(${product.id})" class="icon-btn-overlay">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category}</div>
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-rating">
+                            ${'<i class="fas fa-star"></i>'.repeat(Math.floor(product.rating))}
+                            <span>(${product.reviews})</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$${product.price}</span>
+                            ${product.oldPrice ? `<span class="old-price">$${product.oldPrice}</span>` : ''}
+                        </div>
+                        <button onclick="addToCart(${product.id})" class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterProducts() {
+            const category = document.querySelector('input[name="category"]:checked').value;
+            const maxPrice = document.getElementById('priceRange').value;
+            const cards = document.querySelectorAll('.product-card');
+            
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                const cardPrice = parseFloat(card.getAttribute('data-price'));
+                
+                if ((category === 'all' || cardCategory === category) && cardPrice <= maxPrice) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            updateProductCount();
+        }
+
+        function sortProducts() {
+            const sortBy = document.getElementById('sortBy').value;
+            const container = document.getElementById('productsContainer');
+            const cards = Array.from(container.getElementsByClassName('product-card'));
+            
+            cards.sort((a, b) => {
+                const priceA = parseFloat(a.getAttribute('data-price'));
+                const priceB = parseFloat(b.getAttribute('data-price'));
+                
+                if (sortBy === 'price-low') return priceA - priceB;
+                if (sortBy === 'price-high') return priceB - priceA;
+                return 0;
+            });
+            
+            cards.forEach(card => container.appendChild(card));
+        }
+
+        function updatePriceLabel() {
+            document.getElementById('priceLabel').textContent = '$' + document.getElementById('priceRange').value;
+        }
+
+        function updateProductCount() {
+            const visible = document.querySelectorAll('.product-card[style*="display: block"], .product-card:not([style*="display: none"])').length;
+            document.getElementById('productCount').textContent = visible;
+              }
+
+        function resetFilters() {
+            document.querySelector('input[name="category"][value="all"]').checked = true;
+            document.getElementById('priceRange').value = 300;
+            document.getElementById('priceLabel').textContent = '$300';
+            document.getElementById('sortBy').value = 'default';
+            filterProducts();
+        }
+    </script>
+    <!-- Login/Signup Modal -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-modal-content">
+            <button class="auth-close" onclick="closeAuthModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="auth-form" id="loginForm">
+                <h2 style="text-align: center; margin-bottom: 10px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Welcome Back!</h2>
+                <p style="text-align: center; color: var(--text-light); margin-bottom: 30px;">Sign in to your account</p>
+                
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="loginEmail" required placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="loginPassword" required placeholder="Enter your password">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block" style="margin-top: 20px;">
+                        <i class="fas fa-sign-in-alt"></i> Sign In
+                    </button>
+                </form>
+                
+                <p style="text-align: center; margin-top: 20px; color: var(--text-light);">
+                    Don't have an account? 
+                    <a href="#" onclick="switchToSignup()" style="color: var(--primary-color); font-weight: 600;">Sign Up</a>
+                </p>
+            </div>
+            
+            <div class="auth-form" id="signupForm" style="display: none;">
+                <h2 style="text-align: center; margin-bottom: 10px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Create Account</h2>
+                <p style="text-align: center; color: var(--text-light); margin-bottom: 30px;">Join ShopHub today!</p>
+                
+                <form onsubmit="handleSignup(event)">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="signupName" required placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="signupEmail" required placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="signupPassword" required placeholder="Create a password" minlength="6">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" id="signupConfirmPassword" required placeholder="Confirm your password" minlength="6">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block" style="margin-top: 20px;">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </button>
+                </form>
+                
+                <p style="text-align: center; margin-top: 20px; color: var(--text-light);">
+                    Already have an account? 
+                    <a href="#" onclick="switchToLogin()" style="color: var(--primary-color); font-weight: 600;">Sign In</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

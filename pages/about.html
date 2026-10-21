@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ShopHub</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ðŸ›’</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container-fluid">
+            <div class="top-bar-content">
+                <div class="top-left">
+                    <i class="fas fa-phone-alt"></i> +880 1750653554
+                    <i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ffcfaffffe0fdfbcffce7e0ffe7faeda1ece0e2"><span class="__cf_email__" data-cfemail="3b4f4e5352550d080c595f7b5c565a525715585456">[email&#160;protected]</span></a>
+                </div>
+                <div class="top-right">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container-fluid">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Shop<strong>Hub</strong></span>
+                </div>
+                <div class="nav-center">
+                    <ul class="nav-menu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="deals.html">Deals</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <button class="icon-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge" id="cartBadge">0</span>
+                    </button>
+                    
+                    <button class="icon-btn" onclick="toggleUserMenu()">
+                        <i class="far fa-user"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); padding: 80px 0; text-align: center; color: white;">
+        <div class="container-fluid">
+            <h1 style="font-size: 52px; font-weight: 700; margin-bottom: 15px;">About ShopHub</h1>
+            <p style="font-size: 18px; opacity: 0.95;">Your trusted e-commerce partner since 2026</p>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0; background: var(--bg-white);">
+        <div class="container-fluid">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 36px; margin-bottom: 20px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Our Story</h2>
+                <p style="font-size: 18px; line-height: 1.8; color: var(--text-light); margin-bottom: 30px;">
+                    ShopHub was founded with a simple mission: to make online shopping easy, affordable, and enjoyable for everyone. We believe that shopping should be a delightful experience, which is why we've curated a collection of high-quality products at competitive prices.
+                </p>
+                <p style="font-size: 18px; line-height: 1.8; color: var(--text-light);">
+                    From electronics to fashion, home essentials to sports equipment, we offer a wide range of products to meet all your needs. Our team works tirelessly to ensure that every product meets our quality standards and arrives at your doorstep in perfect condition.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0; background: var(--bg-light);">
+        <div class="container-fluid">
+            <h2 style="text-align: center; font-size: 36px; margin-bottom: 50px;">Why Choose Us?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div style="background: var(--bg-white); padding: 40px; border-radius: 15px; text-align: center; box-shadow: var(--shadow-sm);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #FFA726, #FB8C00); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-shipping-fast" style="font-size: 35px; color: white;"></i>
+                    </div>
+                    <h3 style="font-size: 20px; margin-bottom: 10px;">Fast Shipping</h3>
+                    <p style="color: var(--text-light);">Quick and reliable delivery to your doorstep</p>
+                </div>
+                <div style="background: var(--bg-white); padding: 40px; border-radius: 15px; text-align: center; box-shadow: var(--shadow-sm);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #7E57C2, #5E35B1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-shield-alt" style="font-size: 35px; color: white;"></i>
+                    </div>
+                    <h3 style="font-size: 20px; margin-bottom: 10px;">Secure Payment</h3>
+                    <p style="color: var(--text-light);">100% secure transactions guaranteed</p>
+                </div>
+                <div style="background: var(--bg-white); padding: 40px; border-radius: 15px; text-align: center; box-shadow: var(--shadow-sm);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #26A69A, #00897B); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-headset" style="font-size: 35px; color: white;"></i>
+                    </div>
+                    <h3 style="font-size: 20px; margin-bottom: 10px;">24/7 Support</h3>
+                    <p style="color: var(--text-light);">Always here to help you anytime</p>
+                </div>
+                <div style="background: var(--bg-white); padding: 40px; border-radius: 15px; text-align: center; box-shadow: var(--shadow-sm);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #EC407A, #D81B60); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-undo" style="font-size: 35px; color: white;"></i>
+                    </div>
+                    <h3 style="font-size: 20px; margin-bottom: 10px;">Easy Returns</h3>
+                    <p style="color: var(--text-light);">Hassle-free 30-day return policy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Shop<strong>Hub</strong></span>
+                    </div>
+                    <p>Your trusted online shopping destination.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ShopHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- User Menu Dropdown -->
+    <div class="user-menu" id="userMenu">
+        <div class="user-info">
+            <div class="user-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="user-details">
+                <h4>Welcome!</h4>
+                <p>Sign in to your account</p>
+            </div>
+        </div>
+        <ul class="user-menu-list">
+            <li><a href="#" onclick="event.preventDefault(); showMyProfile(); toggleUserMenu();"><i class="fas fa-user"></i> My Profile</a></li>
+            <li><a href="#" onclick="event.preventDefault(); showMyOrders(); toggleUserMenu();"><i class="fas fa-shopping-bag"></i> My Orders</a></li>
+            <li><a href="#" onclick="toggleWishlist(); toggleUserMenu();"><i class="fas fa-heart"></i> Wishlist</a></li>
+<li><a href="#" onclick="event.preventDefault();"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="#" class="login-btn" onclick="event.preventDefault(); toggleUserMenu(); openAuthModal();"><i class="fas fa-sign-in-alt"></i> Login / Sign Up</a></li>
+        </ul>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="product-modal-content" id="productModalContent">
+            <!-- Product details will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Login/Signup Modal -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-modal-overlay" onclick="closeAuthModal()"></div>
+        <div class="auth-modal-content">
+            <button class="auth-close" onclick="closeAuthModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <!-- Login Form -->
+            <div class="auth-form" id="loginForm">
+                <div class="auth-header">
+                    <h2>Welcome Back!</h2>
+                    <p>Sign in to your account</p>
+                </div>
+                
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="loginEmail" required placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" id="loginPassword" required placeholder="Enter your password">
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-link" onclick="event.preventDefault();">Forgot Password?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block auth-submit">
+                        <i class="fas fa-sign-in-alt"></i> Sign In
+                    </button>
+                </form>
+                
+                <div class="auth-divider">
+                    <span>OR</span>
+                </div>
+                
+                <div class="social-login">
+                    <button class="social-btn google-btn" onclick="handleGoogleLogin()">
+                        <i class="fab fa-google"></i> Continue with Google
+                    </button>
+                    <button class="social-btn facebook-btn" onclick="handleFacebookLogin()">
+                        <i class="fab fa-facebook-f"></i> Continue with Facebook
+                    </button>
+                </div>
+                
+                <p class="auth-switch">
+                    Don't have an account? <a href="#" onclick="switchToSignup(); return false;">Sign Up</a>
+                </p>
+            </div>
+            
+            <!-- Signup Form -->
+            <div class="auth-form" id="signupForm" style="display: none;">
+                <!-- Signup form content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be inserted here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+            <a href="cart.html" class="btn btn-outline btn-block">View Cart</a>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-sidebar" id="wishlistSidebar">
+        <div class="wishlist-header">
+            <h3><i class="fas fa-heart"></i> My Wishlist</h3>
+            <button class="close-wishlist" onclick="toggleWishlist()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="wishlist-items" id="wishlistItems">
+            <!-- Wishlist items will be inserted here -->
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
